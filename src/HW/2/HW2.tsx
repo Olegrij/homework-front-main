@@ -10,11 +10,11 @@ export type UserType = {
   id: number;
   name: string;
   age: number;
-  address: any; // пропиши типизацию
+  address: AddressType; // пропиши типизацию V
 };
 
 export type UsersObjectType = {
-  myFriends: any; // пропиши типизацию
+  myFriends: Array<UserType> // пропиши типизацию V
 };
 
 export const HW2 = () => {
@@ -44,6 +44,7 @@ export const HW2 = () => {
     ]
   }
 
+  // @ts-ignore
   let [currentUsers, setCurrentUsers] = useState<UsersObjectType>(users);
 
   const filterUsers = () => {
